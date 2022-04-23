@@ -6,39 +6,86 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
+    <EditText
+        android:id="@+id/lvLayoutB_edtSearch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
-        android:text="Màn hình điều hướng"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:textSize="30dp"
-        android:textAlignment="center"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/border_background"
+        android:drawableLeft="@drawable/user"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Put name to add"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/main_btn1"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Layout 1"
-        android:layout_marginTop="30dp"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/lvLayoutB_edtSearch">
 
-    <Button
-        android:id="@+id/main_btn2"
-        android:layout_marginLeft="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Layout 2"
-        app:layout_constraintBottom_toBottomOf="@+id/main_btn1"
-        app:layout_constraintStart_toEndOf="@+id/main_btn1"
-        app:layout_constraintTop_toTopOf="@+id/main_btn1" />
+        <Button
+            android:id="@+id/lvLayoutB_btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="#208CC9"
+            android:text="Add"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/lvLayoutB_btnRemove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="#208CC9"
+            android:text="Remove"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/lvLayoutB_btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="#208CC9"
+            android:text="Cancel"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:layout_marginTop="20dp"
+        android:background="#9ad1bd"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <ListView
+            android:id="@+id/lvLayoutB_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
